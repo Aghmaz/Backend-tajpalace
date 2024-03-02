@@ -17,10 +17,11 @@ const roomFeatureRoute = require("./routes/roomFeature");
 const innerhotelRoute = require("./routes/InnerHotel");
 const paymentRoute = require("./routes/payment");
 mongoose
-  .connect("mongodb://0.0.0.0:27017/hotel-room-database")
-  .then(() => console.log("connected to mongodb"))
-  .catch((error) => console.log("couldn't connected to mongodb"));
-
+  .connect(
+    "mongodb+srv://yasinjimi4u84:wzBpMDAWzknstcZps@cluster0.fgtiu5a.mongodb.net/"
+  )
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.log(`Couldn't connected to MongoDB, ${error}`));
 // API
 // app.use(cookieParser())
 app.use(cors());
