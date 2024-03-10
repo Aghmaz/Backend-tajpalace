@@ -26,7 +26,7 @@ router.post("/:roomId/bookings/payment-intent", async (req, res) => {
       addOns,
       bookingStatus,
     } = req.body;
-    let roomId = req?.params?.roomId;
+    let roomId = req && req.params && req.params.roomId;
     const hotelRoom = await Room.findById(roomId);
     if (!hotelRoom) {
       return res.status(400).json({ message: "Hotel not found" });
