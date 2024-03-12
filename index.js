@@ -18,10 +18,12 @@ const innerhotelRoute = require("./routes/InnerHotel");
 const paymentRoute = require("./routes/payment");
 mongoose
   .connect(
-    "mongodb+srv://yasinjimi4u84:wzBpMDAWzknstcZps@cluster0.fgtiu5a.mongodb.net/"
+    "mongodb+srv://yasinjimi4u84:wzBpMDAWzknstcZp@hoteltajpalace.ksgeqbu.mongodb.net/?retryWrites=true&w=majority&appName=hotelTajPalace"
   )
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.log(`Couldn't connected to MongoDB, ${error}`));
+
+// wzBpMDAWzknstcZp
 // API
 // app.use(cookieParser())
 app.use(cors());
